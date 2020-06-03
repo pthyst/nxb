@@ -54,9 +54,8 @@
 				<div class="info info--left">
 					<ul>
 						<li><i class="fas fa-building"></i> Trụ sở chính: 280 An Dương Vương, phường 4, Quận 5, Thành phố Hồ Chí Minh</li>
-						<li><i class="fas fa-clock"></i> Giờ làm việc: 7h30 - 17h00 </li>
+						<li><i class="fas fa-clock"></i> Giờ làm việc: 8h30 - 16h30 </li>
 						<li><i class="fas fa-phone-alt"></i> Điện thoại - Fax : (+84)-(28)-39381382</li>
-						<li><i class="fas fa-envelope"></i> Email : nxb@hcmue.edu.vn</li>
 					</ul>
 				</div>
 				<div class="info info--right"></div>
