@@ -19,4 +19,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-echo '<div id="container" class="' . ( is_active_sidebar( 'sidebar-shop' ) ? 'col-md-9' : 'col-md-12' ) . '"><div id="content" role="main">';
+echo '<div id="container" class="' . ( is_active_sidebar( 'sidebar-shop' ) ? 'col-md-8' : 'col-md-12' ) . '"><div id="content" role="main">';

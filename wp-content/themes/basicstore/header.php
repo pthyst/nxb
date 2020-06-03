@@ -26,19 +26,48 @@
 	<a class="skip-link screen-reader-text" href="#site-content"><?php esc_html_e( 'Skip to content', 'basicstore' ); ?></a>
 
 	<header id="site-header">
+	</header><!-- #site-header -->
 
-		<nav class="navbar navbar-default navbar-fixed-top">
+	<?php
+    // Header image
+	$header_image = get_header_image();
+	if ( $header_image ) {
+		$header_image_style = 'background-image:url(' . esc_url( $header_image ) . ');';
+	} else {
+		$header_image_style = '';
+	}	
+	?>
+
+    <?php
+    // Header text color
+    if ( display_header_text() ) {
+	    $style = ' style="color:#' . get_header_textcolor() . ';"';
+    } else {
+	    $style = ' style="display:none;"';
+    }
+    ?>
+	<section id="site-content" class="site-content">
+	<?php if ( is_home() || is_front_page() ) : ?>
+		<div id="site-jumbotron" class="jumbotron text-center" style="<?php echo $header_image_style; ?>">
 
 			<div class="container">
 
-					<div class="navbar-header">
+				<h1 <?php echo $style; ?>><?php bloginfo( 'name' ); ?></h1>
+				<p <?php echo $style; ?>><?php bloginfo('description'); ?></p>
 
-	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-	            <span class="sr-only"><?php _e( 'Toggle navigation', 'basicstore' ); ?></span>
-	            <span class="icon-bar <?php echo basic_store_navbar_toggle_check_cart_items(); ?>"></span>
-	            <span class="icon-bar <?php echo basic_store_navbar_toggle_check_cart_items(); ?>"></span>
-	            <span class="icon-bar <?php echo basic_store_navbar_toggle_check_cart_items(); ?>"></span>
-	          </button>
+			</div><!-- .container -->
+
+		</div><!-- #site-jumbotron -->
+	<?php endif; ?>
+	<nav class="navbar navbar-default">
+			<div class="container">
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only"><?php _e( 'Toggle navigation', 'basicstore' ); ?></span>
+						<span class="icon-bar <?php echo basic_store_navbar_toggle_check_cart_items(); ?>"></span>
+						<span class="icon-bar <?php echo basic_store_navbar_toggle_check_cart_items(); ?>"></span>
+						<span class="icon-bar <?php echo basic_store_navbar_toggle_check_cart_items(); ?>"></span>
+					  </button>
 
 						<?php if (has_custom_logo()) : ?>
 							<a class="navbar-brand nav-brand-img" href="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -90,41 +119,11 @@
 			</div><!-- .container -->
 
 		</nav><!-- .navbar -->
-
-	</header><!-- #site-header -->
-
-	<?php
-    // Header image
-	$header_image = get_header_image();
-	if ( $header_image ) {
-		$header_image_style = 'background-image:url(' . esc_url( $header_image ) . ');';
-	} else {
-		$header_image_style = '';
-	}	
-	?>
-
-    <?php
-    // Header text color
-    if ( display_header_text() ) {
-	    $style = ' style="color:#' . get_header_textcolor() . ';"';
-    } else {
-	    $style = ' style="display:none;"';
-    }
-    ?>
-
-	<section id="site-content" class="site-content">
-	<?php if ( is_home() || is_front_page() ) : ?>
-		<div id="site-jumbotron" class="jumbotron text-center" style="<?php echo $header_image_style; ?>">
-
-			<div class="container">
-
-				<h1 <?php echo $style; ?>><?php bloginfo( 'name' ); ?></h1>
-				<p <?php echo $style; ?>><?php bloginfo('description'); ?></p>
-
-			</div><!-- .container -->
-
-		</div><!-- #site-jumbotron -->
-	<?php endif; ?>
-	<div class="container">
-
+		
+<!-- Main Body -->
+<div class="container-fluid" id="customize_container">
 		<div class="row">
+			<!-- sidebar-shop.php -->
+			<aside id="customize_first_sidebar" class="widget-area col-md-2 offset-md-2">
+				<?php dynamic_sidebar( 'sidebar-shop' ); ?>
+			</aside><!-- #secondary -->
