@@ -16,7 +16,7 @@ if (
 }
 ?>
 
-<aside id="secondary" class="widget-area col-md-3">
+<aside id="secondary" class="widget-area col-md-2 frontpage_sidebar">
 	<?php if ( is_front_page() ): ?>
 		<?php dynamic_sidebar( 'sidebar-frontpage' ); ?>
 	<?php else: ?>

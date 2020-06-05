@@ -8,17 +8,17 @@
  */
 
 // check to see if Site Sidebar is published to adjust bootstrap column size
-$bootstrap_col_size = is_active_sidebar( 'sidebar-site' ) ? "col-md-9" : "col-md-12";
+$bootstrap_col_size = is_active_sidebar( 'sidebar-site' ) ? "col-md-8" : "col-md-8";
 
 get_header(); ?>
 
-	<div id="primary" class="content-area col-md-12 <?php echo esc_attr($bootstrap_col_size); ?>">
+	<div id="primary" class="content-area <?php echo esc_attr($bootstrap_col_size); ?>">
 
 		<main id="main" class="site-main" >
 
 		<?php
 		while ( have_posts() ) : the_post();
-
+			
 			get_template_part( 'template-parts/content', get_post_format() );
 
 			the_post_navigation();

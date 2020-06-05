@@ -47,7 +47,7 @@
     }
     ?>
 	<section id="site-content" class="site-content">
-	<?php if ( is_home() || is_front_page() ) : ?>
+	<?php //if ( is_home() || is_front_page() ) : ?>
 		<div id="site-jumbotron" class="jumbotron text-center" style="<?php echo $header_image_style; ?>">
 
 			<div class="container">
@@ -58,7 +58,7 @@
 			</div><!-- .container -->
 
 		</div><!-- #site-jumbotron -->
-	<?php endif; ?>
+	<?php //endif; ?>
 	<nav class="navbar navbar-default">
 			<div class="container">
 					<div class="navbar-header">

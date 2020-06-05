@@ -43,7 +43,7 @@ function basic_store_addBootstrapToCheckoutFields($fields) {
    		return $bootstrap_col_size = 'col-sm-6';
    		break;
    	case '3':
-   		return $bootstrap_col_size = 'col-sm-4';
+   		return $bootstrap_col_size = 'col-sm-3';
    		break;
    	case '4':
    		return $bootstrap_col_size = 'col-sm-3';

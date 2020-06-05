@@ -13,7 +13,7 @@
  */
 
 // check to see if Site Sidebar is published to adjust bootstrap column size
-$bootstrap_col_size = is_active_sidebar( 'sidebar-site' ) ? "col-md-9" : "col-md-12";
+$bootstrap_col_size = is_active_sidebar( 'sidebar-site' ) ? "col-md-8" : "col-md-12";
 
 get_header(); ?>
 

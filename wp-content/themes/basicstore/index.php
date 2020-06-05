@@ -13,7 +13,7 @@
  */
 
 // check to see if Site Sidebar is published to adjust bootstrap column size
-$bootstrap_col_size = is_active_sidebar( 'sidebar-site' ) ? "col-md-9" : "col-md-12";
+$bootstrap_col_size = is_active_sidebar( 'sidebar-site' ) ? "col-md-8" : "col-md-12";
 
 get_header(); ?>
 
@@ -35,6 +35,7 @@ get_header(); ?>
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 
+				
 				/*
 				 * Include the Post-Format-specific template for the content.
 				 * If you want to override this in a child theme, then include a file

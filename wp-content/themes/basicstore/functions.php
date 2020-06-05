@@ -261,3 +261,10 @@ require get_template_directory() . '/inc/wp-bootstrap-pagination.php';
  * Load WooCommerce functions
  */
 require get_template_directory() . '/inc/woocommerce.php';
+
+add_filter('loop_shop_columns', 'loop_columns', 999);
+if (!function_exists('loop_columns')) {
+	function loop_columns() {
+		return 4; // 3 products per row
+	}
+}
